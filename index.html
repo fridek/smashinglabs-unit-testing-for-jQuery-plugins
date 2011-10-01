@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>QUnit Test Suite</title>
+	<link rel="stylesheet" href="qunit.css" type="text/css" media="screen">
+  <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.6.4.min.js"></script>
+	<script type="text/javascript" src="qunit.js"></script>
+  
+  <style type="text/css">
+    #examples > div {
+      float: left;
+      margin: 0 20px;
+    }
+  
+    #headers h2 {
+      font-size: 12px;
+    }
+    
+    #headers h2#hackme {
+      font-size: 14px;
+      font-weight: bolder;
+      color: pink;
+    }
+    
+    #widget {
+      width: 240px;
+      padding: 0 5px;
+      text-align: justify;
+      font-size: 14px;
+    }
+    
+    #widget h2 {
+      font-size: 16px;
+      padding: 2px 5px;
+      
+      background-color: #2B81AF;
+      color: #fff;
+      
+      margin: 0;
+    }
+    
+    #widget img {
+      float: right;
+      margin: 5px 0 0 5px;
+    }
+    
+    #clearfixes .float {
+      width: 200px;
+      border: 1px solid #ddd;
+      height: 100px;
+      
+      margin: 20px;
+      float: left;
+    }
+    
+    .clearfix{
+      content: ".";
+      display: block;
+      clear: both;
+      visibility: hidden;
+      line-height: 0;
+      height: 0;
+      
+      float: none !important;
+    }
+  </style>
+</head>
+<body>
+    <div id="examples">
+      <div id="headers" style="width: 300px; height: 400px;">
+        <h2 id="imfine">Some header</h2>
+        <h2 id="hackme">Some wrong header</h2>
+      </div>
+      
+      <div id="widget">
+        <h2>Header</h2>
+        <img src="http://placehold.it/90x110" alt="the best image ever!" />
+        <!-- start slipsum code -->
+
+        Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be? He's the exact opposite of the hero. And most times they're friends, like you and me! I should've known way back when... You know why, David? Because of the kids. They called me Mr Glass.
+
+
+        <!-- end slipsum code -->        
+      </div>
+      
+      <div id="clearfixes">
+        <div id="hasclearfix">
+          <div class="float">A</div>
+          <div class="float">B</div>
+          <div class="float">C</div>
+          <div class="clearfix"></div>
+        </div>
+        
+        <div id="noclearix">
+          <div class="float">A</div>
+          <div class="float">B</div>
+          <div class="float">C</div>       
+        </div>
+      </div>
+      
+      <div class="clearfix"></div>
+    </div>
+    <div class="clearfix"></div>
+  <hr />  
+    
+	<h1 id="qunit-header">QUnit Test Suite</h1>
+	<h2 id="qunit-banner"></h2>
+	<div id="qunit-testrunner-toolbar"></div>
+	<h2 id="qunit-userAgent"></h2>
+	<ol id="qunit-tests"></ol>
+	<div id="qunit-fixture">
+    part 1
+    <form>
+      <input type="text" name="a" id="a" />  +  <input type="text" name="b" id="b"/>
+    </form>
+  
+  </div>
+  <script type="text/javascript" src="test.js"></script>
+</body>
+</html>
